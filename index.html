@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Goals</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-b7saLRO+1OSG1XRWPMfALB8RSuAnvXp9qXfnIIfpr6Clb4/gzHw4sj8B5dDnl+22AmQh5QuN2qLgEmAr8r0+AA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <button id="theme-toggle" data-testid="theme-toggle">
+        <i class="fas fa-adjust">theme</i>
+    </button>
+
+    <header>
+        <h1 data-testid="page-title">My Tech Goals for the Next 2 Years</h1>
+    </header>
+
+    <section class="profile" data-testid="profile-section">
+        <img src="images/img.jpg" alt="Slack Profile Picture" data-testid="profile-picture" class="profile-picture">
+        <p data-testid="slack-name">Francis Victoria</p>
+        <p data-testid="slackEmail">victoriafrancis@gmail.com</p>
+        <p data-testid="currentTimeUTC">Current Time (UTC): <span id="time-utc"></span></p>
+        <p data-testid="currentDay">Today is: <span id="day-of-week"></span></p>
+
+    </section>
+
+    <section class="goals" data-testid="goals-section">
+        <h2>Goals</h2>
+        <ul>
+            <li data-testid="goal-1">Become proficient in web performance optimization.</li>
+            <li data-testid="goal-2">Contribute to open-source projects regularly.</li>
+            <li data-testid="goal-3">Build a personal project portfolio.</li>
+            <li data-testid="goal-3">Improve testing and automation skills.</li>
+            <li data-testid="goal-4">Master backend technologies like Node.js and Python.</li>
+            <li data-testid="goal-5">Enhance my skills in data structures and algorithms.</li>
+            <li data-testid="goal-3">Stay up-to-date with industry trends.</li>
+
+        </ul>
+    </section>
+
+    <section class="links" data-testid="links-section">
+        <h2>Helpful Links</h2>
+        <ul>
+            <li><a href="https://hng.tech/learn" target="_blank" data-testid="link-hng">HNG Learning Resources</a></li>
+            <li><a href="https://keyword.dog" target="_blank" data-testid="link-keyword-dog">Keyword Dog</a></li>
+            <li><a href="https://scrapeanyweb.site" target="_blank" data-testid="link-scrape-any-web">Scrape Any Web</a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

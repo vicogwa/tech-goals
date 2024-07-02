@@ -1,0 +1,231 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7d7e0;
+    /* Light background */
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Added color transition */
+}
+
+body.dark-theme {
+    background-color: #313132;
+    color: #fff;
+    /* White text for better contrast in dark mode */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    transition: color 0.3s ease;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #8cbaeb;
+    /* Adding a border for better visibility */
+    transition: transform 0.3s ease;
+    /* Smooth scaling effect on hover */
+}
+
+.profile p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    /* Light color for better readability */
+}
+
+/* Goals Section */
+.goals {
+    background-color: #afd4e5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.goals h2 {
+    margin-bottom: 10px;
+}
+
+.goals ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.goals li {
+    margin-bottom: 10px;
+    opacity: 0;
+    /* Start invisible for animation */
+    animation: fadeIn 1s ease forwards;
+}
+
+.goals li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.goals li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.goals li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.goals li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.goals li:nth-child(5) {
+    animation-delay: 1s;
+}
+
+/* Links Section */
+.links {
+    background-color: #afd4e5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.links h2 {
+    margin-bottom: 10px;
+
+}
+
+.links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+
+}
+
+.links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #75b2eb;
+
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #156aba;
+    /* Lighter blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile p {
+        font-size: 1em;
+    }
+
+    .goals,
+    .links {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile p {
+        font-size: 0.9em;
+    }
+
+    .goals,
+    .links {
+        padding: 10px;
+    }
+}
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Slight upward movement */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Back to original position */
+    }
+}
+
+/* Hover effects */
+.profile-picture:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
+
+.goals:hover,
+.links:hover {
+    background-color: rgba(177, 226, 239, 0.9);
+    /* Slightly lighter background with opacity on hover */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #313132;
+    color: #fff;
+}
+
+body.dark-theme .goals,
+body.dark-theme .links,
+body.dark-theme .introduction,
+body.dark-theme .profile {
+    background-color: #424242;
+    color: #f4f4f4;
+}
+
+/* Button Styles */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Added transition for background color */
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
